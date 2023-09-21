@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+}
+
+.btn-modal{
+    text-decoration: none;
+    padding: 15px 40px;
+    background-color: rgb(255, 122, 0);
+    color: #fff;
+    border-radius: 40px;
+    font-family: sans-serif;
+    font-weight: bolder;
+    box-shadow: 0 10px 40px rgba(255, 122, 0, 0.4);
+}
+
+.video-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(255, 122, 0, 0.100);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+.video-container .close{
+    position: absolute;
+    top: 40px;
+    right: 55px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+.short-title{
+    font-weight: 700;
+}
+
+.video-container video{
+    width: 90%;
+    border-radius: 10px;
+    max-height: 80vh;
+    max-width: 400px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: all 0.3s;
+    transform: translateY(0);
+}
+
+.show{
+    pointer-events: all;
+    opacity: 1;
+}
+
+.video-container.show video{
+    transform: scale(1);
+    transform: translateY(0);
+}
+
+.modal-img{
+    max-width: 400px;
+    border-radius: 10px 10px 0 0 ;
+}
+
+.modals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    gap: 20px; /* Adjust if you want more/less space between items */
+}
+
+.btn-orange {
+    background-color: rgb(255, 122, 0);
+    color: #fff;
+    box-shadow: 0 10px 40px rgba(255, 122, 0, 0.4);
+}
+
+.btn-orange:hover {
+    /* Add hover styles if needed */
+    background-color: rgb(255, 102, 0);
+}
+
+
+/* For medium screens (example: tablets), 3 columns */
+@media only screen and (max-width: 1024px) {
+    .modals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For smaller screens, 2 columns */
+@media only screen and (max-width: 768px) {
+    .modals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* For the smallest screens, 1 column */
+@media only screen and (max-width: 480px) {
+    .modals {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+

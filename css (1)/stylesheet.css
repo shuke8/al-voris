@@ -287,6 +287,8 @@ header{
   width: 100%;
 }
 .main-menu{
+  display: flex;
+  align-items: center;
   float: left;
   width: 100%;
 }
