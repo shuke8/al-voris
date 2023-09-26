@@ -292,6 +292,11 @@ header{
   float: left;
   width: 100%;
 }
+
+.slogan h3{
+  font-size: 14px;
+}
+
 .basic-menu.f-right {
   float: right;
 }
